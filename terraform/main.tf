@@ -1,3 +1,4 @@
+/* # EXAMPLE (Template)
 module "sandbox" {
   source = "./modules/aft-account-request"
 
@@ -24,4 +25,36 @@ module "sandbox" {
   }
 
   account_customizations_name = "sandbox"
+}
+*/
+
+
+
+# Account for AFT Testing
+module "aft-testing" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "acc-aws-cs-gvpnid-preprod@ngena.net"
+    AccountName               = "acc-aws-cs-gvpnid-preprod"
+    ManagedOrganizationalUnit = "Cloud Controllers Preprod"
+    SSOUserEmail              = "acc-aws-cs-gvpnid-preprod@ngena.net"
+    SSOUserFirstName          = "acc-aws-cs"
+    SSOUserLastName           = "gvpnid-preprod"
+  }
+
+  account_tags = {
+    "Managed by" = "AFT"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "ngena Security"
+    change_reason       = "Create a new AWS Account for FP developers"
+  }
+
+  custom_fields = {
+    group = "preprod"
+  }
+
+  account_customizations_name = "acc-aws-cs-gvpnid-preprod"
 }
