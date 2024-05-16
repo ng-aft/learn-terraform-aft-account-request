@@ -49,7 +49,7 @@ module "aft-testing" {
 
   change_management_parameters = {
     change_requested_by = "ngena Security"
-    change_reason       = "Create a new AWS Account for FP developers"
+    change_reason       = "Re-Create a new AWS Account for FP developers"
   }
 
   custom_fields = {
