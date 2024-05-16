@@ -29,7 +29,7 @@ module "sandbox" {
 */
 
 
-/*
+
 # Account for AFT Testing
 module "aft-testing" {
   source = "./modules/aft-account-request"
@@ -37,7 +37,7 @@ module "aft-testing" {
   control_tower_parameters = {
     AccountEmail              = "acc-aws-cs-gvpnid-preprod@ngena.net"
     AccountName               = "acc-aws-cs-gvpnid-preprod"
-    ManagedOrganizationalUnit = "Cloud Controllers Preprod (ou-xfe5-a8hb8ml8)"
+    ManagedOrganizationalUnit = "Cloud Controllers Preprod (ou-sit7-7mmlnjx7)"
     SSOUserEmail              = "acc-aws-cs-gvpnid-preprod@ngena.net"
     SSOUserFirstName          = "acc-aws-cs"
     SSOUserLastName           = "gvpnid-preprod"
@@ -58,4 +58,3 @@ module "aft-testing" {
 
   account_customizations_name = "acc-aws-cs-gvpnid-preprod"
 }
-*/
